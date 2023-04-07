@@ -77,8 +77,3 @@ public class MultimediaDeviceBuilder
         MenuDeMedios = menuDeMedios;
     }
 }
-
-interface IMessageToDisplay
-{
-    string MessageToDisplay {get;}
-}

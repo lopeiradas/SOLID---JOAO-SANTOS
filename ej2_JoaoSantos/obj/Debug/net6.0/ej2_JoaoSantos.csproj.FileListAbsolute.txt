@@ -1,0 +1,5 @@
+D:\SOLID JoaoSantos\ej2_JoaoSantos\obj\Debug\net6.0\ej2_JoaoSantos.csproj.AssemblyReference.cache
+D:\SOLID JoaoSantos\ej2_JoaoSantos\obj\Debug\net6.0\ej2_JoaoSantos.GeneratedMSBuildEditorConfig.editorconfig
+D:\SOLID JoaoSantos\ej2_JoaoSantos\obj\Debug\net6.0\ej2_JoaoSantos.AssemblyInfoInputs.cache
+D:\SOLID JoaoSantos\ej2_JoaoSantos\obj\Debug\net6.0\ej2_JoaoSantos.AssemblyInfo.cs
+D:\SOLID JoaoSantos\ej2_JoaoSantos\obj\Debug\net6.0\ej2_JoaoSantos.csproj.CoreCompileInputs.cache
