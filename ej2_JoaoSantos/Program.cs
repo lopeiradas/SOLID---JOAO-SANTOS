@@ -61,3 +61,24 @@
         } while (tecla.Key != ConsoleKey.Escape);
     }
 }
+
+public class MultimediaDeviceBuilder
+{
+    private IMedia CdPlayer{get;set;}
+    private IMedia DABRadio{get;set;}
+    private IMedia UsbPlayer {get;set;}
+    private IMessageToDisplay MenuDeMedios{get;set;}
+
+    public MultimediaDeviceBuilder(IMedia cdPlayer,IMedia dabRadio,IMedia usbPlayer, IMessageToDisplay menuDeMedios)
+    {
+        CdPlayer = cdPlayer;
+        DABRadio = dabRadio;
+        UsbPlayer = usbPlayer;
+        MenuDeMedios = menuDeMedios;
+    }
+}
+
+interface IMessageToDisplay
+{
+    string MessageToDisplay {get;}
+}
