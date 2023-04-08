@@ -1,8 +1,4 @@
-
-
-
-
-class CDPlayer : IMedia
+public class CDPlayer : IRemovableMedia<Disc>
 {
     private Disc? Disc { get; set; }
     private ushort Track { get; set; }
@@ -23,13 +19,12 @@ class CDPlayer : IMedia
 
     public bool MediaIn => Disc != null;
 
-    public void InsertMedia(Disc media)
+    public void InsertMedia(ref Disc media)
     {
         Disc = media;
         State = MediaState.Stopped;
     }
-
-    public bool ExtractMedia()
+    public bool RemoveMedia()
     {
         bool ok = MediaIn;
         Disc = null;
@@ -66,6 +61,8 @@ class CDPlayer : IMedia
             return mensaje;
         }
     }
+
+    public string Name => "CDPLAYER MODE";
 
     public void Play()
     {
@@ -110,4 +107,8 @@ class CDPlayer : IMedia
     }
 
     public void Stop() => State = MediaState.Stopped;
+
+    public object Clone() => new CDPlayer();
+
+
 }

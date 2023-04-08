@@ -1,5 +1,4 @@
-
-interface IMessageToDisplay : IMedia
+interface IMessageToDisplay
 {
-    string MessageToDisplay {get;}
+    string MessageToDisplay { get; }
 }

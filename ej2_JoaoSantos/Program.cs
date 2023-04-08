@@ -64,16 +64,38 @@
 
 public class MultimediaDeviceBuilder
 {
-    private IMedia CdPlayer{get;set;}
-    private IMedia DABRadio{get;set;}
-    private IMedia UsbPlayer {get;set;}
-    private IMessageToDisplay MenuDeMedios{get;set;}
+    private IMedia CdPlayer { get; set; }
+    private IMedia DABRadio { get; set; }
+    private IMedia UsbPlayer { get; set; }
+    private IMessageToDisplay MenuDeMedios { get;}
 
-    public MultimediaDeviceBuilder(IMedia cdPlayer,IMedia dabRadio,IMedia usbPlayer, IMessageToDisplay menuDeMedios)
+    public MultimediaDeviceBuilder(IMessageToDisplay menuDeMedios)
     {
-        CdPlayer = cdPlayer;
-        DABRadio = dabRadio;
-        UsbPlayer = usbPlayer;
         MenuDeMedios = menuDeMedios;
     }
+
+    public MultimediaDeviceBuilder SetMedia(CDPlayer media)
+    {
+        CdPlayer = media;
+        return this;        
+    }
+
+    public MultimediaDeviceBuilder SetMedia(DABRadio media)
+    {
+        DABRadio = media;
+        return this;
+    }
+
+    public MultimediaDeviceBuilder SetMedia(USBPlayer media)
+    {
+        UsbPlayer = media;
+        return this;
+    }
+
+    public MultiMmdiaDevice Build()
+    {
+        return new MultimediaDevice(CdPlayer, DABRadio, UsbPlayer, MenuDeMedios);
+    }
 }
+
+

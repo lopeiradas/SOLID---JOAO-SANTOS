@@ -3,7 +3,7 @@
 
 
 
-class DABRadio : IMedia
+public class DABRadio : IMedia
 {
     const float SEEK_STEP = 0.5f;
     const float MAX_FREQUENCY = 108f;

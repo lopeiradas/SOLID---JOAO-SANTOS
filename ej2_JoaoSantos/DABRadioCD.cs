@@ -1,4 +1,4 @@
-class DABRadioCD
+public class DABRadioCD
 {
     private CDPlayer Cd { get; set; }
     private DABRadio Radio { get; set; }

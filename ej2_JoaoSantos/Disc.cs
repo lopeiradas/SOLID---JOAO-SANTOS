@@ -1,7 +1,5 @@
 
-
-
-class Disc
+public class Disc
 {
     private string Album { get; set; }
     private string Artist { get; set; }
