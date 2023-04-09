@@ -93,7 +93,7 @@ public class USBPlayer : IRemovableMedia<USB>
     {
         if (MediaIn && State != MediaState.Stopped)
         {
-            FileNumber = (ushort)((MediaIn && FileNumber == Usb!.FileNumber) ? 1 : FileNumber + 1);
+            FileNumber = (ushort)((MediaIn && FileNumber == Usb!.NumberOfFiles) ? 1 : FileNumber + 1);
             Play();
         }
     }
@@ -102,7 +102,7 @@ public class USBPlayer : IRemovableMedia<USB>
     {
         if (MediaIn && State != MediaState.Stopped)
         {
-            FileNumber = (ushort)((FileNumber == 1) ? Usb!.NumTracks : Track - 1);
+            FileNumber = (ushort)((FileNumber == 1) ? Usb!.NumberOfFiles : FileNumber - 1);
             Play();
         }
     }
@@ -110,10 +110,5 @@ public class USBPlayer : IRemovableMedia<USB>
     public void Stop() => State = MediaState.Stopped;
 
     public object Clone() => new CDPlayer();
-
-    public void InsertMedia(ref USB media)
-    {
-        throw new NotImplementedException();
-    }
 }
 
