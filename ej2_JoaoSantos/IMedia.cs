@@ -1,4 +1,4 @@
-interface IMedia : IMessageToDisplay, ICloneable
+public interface IMedia : IMessageToDisplay, ICloneable
 {
     string Name { get; }
     void Play();

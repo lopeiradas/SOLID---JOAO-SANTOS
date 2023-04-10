@@ -1,9 +1,15 @@
-public class DABRadioCD
+public class MultimediaDeviceBuilder : IMessageToDisplay
 {
-    private CDPlayer Cd { get; set; }
-    private DABRadio Radio { get; set; }
-    private IMedia ActiveDevice { get; set; }
+    private IMedia? CdPlayer { get; set; }
+    private IMedia? DABRadio { get; set; }
+    private IMedia? UsbPlayer { get; set; }
+    private IMessageToDisplay MenuDeMedios { get; }
 
+    public MultimediaDeviceBuilder(IMessageToDisplay menuDeMedios)
+    {
+        MenuDeMedios = menuDeMedios;
+
+    }
     public class DABRadioCDException : MediaException
     {
         public DABRadioCDException(string message) : base(message)
@@ -11,8 +17,15 @@ public class DABRadioCD
         }
     }
 
+    public MultimediaDeviceBuilder SetMedia(CDPlayer media)
+    {
+        CdPlayer = media;
+        return this;
+    }
+
     public DABRadioCD()
     {
+
         Cd = new CDPlayer();
         Radio = new DABRadio();
         ActiveDevice = Radio;

@@ -1,4 +1,4 @@
-interface IMessageToDisplay
+public interface IMessageToDisplay
 {
     string MessageToDisplay { get; }
 }

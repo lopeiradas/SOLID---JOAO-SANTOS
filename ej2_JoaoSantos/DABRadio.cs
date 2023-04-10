@@ -1,8 +1,3 @@
-
-
-
-
-
 public class DABRadio : IMedia
 {
     const float SEEK_STEP = 0.5f;
@@ -50,6 +45,7 @@ public class DABRadio : IMedia
         }
     }
 
+    public string Name => "RADIO MODE";
     public void Play() => State = MediaState.Playing;
 
     public void Stop() => State = MediaState.Stopped;
@@ -88,4 +84,6 @@ public class DABRadio : IMedia
             Play();
         }
     }
+
+    public object Clone() => new DABRadio();    
 }

@@ -67,34 +67,3 @@
     }
 }
 
-public class MultimediaDeviceBuilder
-{
-    private IMedia CdPlayer { get; set; }
-    private IMedia DABRadio { get; set; }
-    private IMedia UsbPlayer { get; set; }
-    private IMessageToDisplay MenuDeMedios { get; }
-
-    public MultimediaDeviceBuilder(IMessageToDisplay menuDeMedios)
-    {
-        MenuDeMedios = menuDeMedios;
-    }
-
-    public MultimediaDeviceBuilder SetMedia(CDPlayer media)
-    {
-        CdPlayer = media;
-        return this;
-    }
-
-    public MultimediaDeviceBuilder SetMedia(DABRadio media)
-    {
-        DABRadio = media;
-        return this;
-    }
-
-    public MultimediaDeviceBuilder SetMedia(USBPlayer media)
-    {
-        UsbPlayer = media;
-        return this;
-    }
-}
-
