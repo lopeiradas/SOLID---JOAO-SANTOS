@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ej2_JoaoSantos/1.0.0": {
+        "runtime": {
+          "ej2_JoaoSantos.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ej2_JoaoSantos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -35,12 +35,16 @@ public class MultimediaDevice : IMedia
     }
     public void Insert<T>(T media)
     {
-        MediaDevices[1] = media;
-        SetActiveDeviceToParameterizedMedia<T>();
+        if (ActiveDevice != null) { throw new Exception("Ya hay un medio insertado"); }
+
+        var nuevaMedia = SetActiveDeviceToParameterizedMedia<T>();
+        nuevaMedia.InsertMedia(ref media);
+        nuevaMedia.Play();
     }
     public void Extract<T>()
     {
-
+        var nuevaMedia = SetActiveDeviceToParameterizedMedia<T>();
+        nuevaMedia.RemoveMedia();
     }
     public void SwitchMode()
     {

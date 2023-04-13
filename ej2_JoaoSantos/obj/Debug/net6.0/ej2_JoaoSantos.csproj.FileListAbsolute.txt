@@ -3,3 +3,13 @@ D:\SOLID JoaoSantos\ej2_JoaoSantos\obj\Debug\net6.0\ej2_JoaoSantos.GeneratedMSBu
 D:\SOLID JoaoSantos\ej2_JoaoSantos\obj\Debug\net6.0\ej2_JoaoSantos.AssemblyInfoInputs.cache
 D:\SOLID JoaoSantos\ej2_JoaoSantos\obj\Debug\net6.0\ej2_JoaoSantos.AssemblyInfo.cs
 D:\SOLID JoaoSantos\ej2_JoaoSantos\obj\Debug\net6.0\ej2_JoaoSantos.csproj.CoreCompileInputs.cache
+D:\SOLID JoaoSantos\ej2_JoaoSantos\bin\Debug\net6.0\ej2_JoaoSantos.exe
+D:\SOLID JoaoSantos\ej2_JoaoSantos\bin\Debug\net6.0\ej2_JoaoSantos.deps.json
+D:\SOLID JoaoSantos\ej2_JoaoSantos\bin\Debug\net6.0\ej2_JoaoSantos.runtimeconfig.json
+D:\SOLID JoaoSantos\ej2_JoaoSantos\bin\Debug\net6.0\ej2_JoaoSantos.dll
+D:\SOLID JoaoSantos\ej2_JoaoSantos\bin\Debug\net6.0\ej2_JoaoSantos.pdb
+D:\SOLID JoaoSantos\ej2_JoaoSantos\obj\Debug\net6.0\ej2_JoaoSantos.dll
+D:\SOLID JoaoSantos\ej2_JoaoSantos\obj\Debug\net6.0\refint\ej2_JoaoSantos.dll
+D:\SOLID JoaoSantos\ej2_JoaoSantos\obj\Debug\net6.0\ej2_JoaoSantos.pdb
+D:\SOLID JoaoSantos\ej2_JoaoSantos\obj\Debug\net6.0\ej2_JoaoSantos.genruntimeconfig.cache
+D:\SOLID JoaoSantos\ej2_JoaoSantos\obj\Debug\net6.0\ref\ej2_JoaoSantos.dll
