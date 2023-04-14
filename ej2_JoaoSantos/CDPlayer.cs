@@ -19,7 +19,7 @@ public class CDPlayer : IRemovableMedia<Disc>
 
     public bool MediaIn => Disc != null;
 
-    public void InsertMedia(ref Disc media)
+    public void InsertMedia(Disc media)
     {
         Disc = media;
         State = MediaState.Stopped;
@@ -62,7 +62,7 @@ public class CDPlayer : IRemovableMedia<Disc>
         }
     }
 
-    public string Name => "CDPLAYER MODE";
+    public string Name => MessageToDisplay;
 
     public void Play()
     {
@@ -109,6 +109,4 @@ public class CDPlayer : IRemovableMedia<Disc>
     public void Stop() => State = MediaState.Stopped;
 
     public object Clone() => new CDPlayer();
-
-
 }

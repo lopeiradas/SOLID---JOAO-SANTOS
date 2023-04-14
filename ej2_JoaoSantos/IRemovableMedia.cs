@@ -1,6 +1,6 @@
 interface IRemovableMedia<T> : IMedia
 {
     bool MediaIn { get; }
-    void InsertMedia(ref T media);
+    void InsertMedia(T media);
     bool RemoveMedia();
 }

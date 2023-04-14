@@ -20,7 +20,7 @@ public class USBPlayer : IRemovableMedia<USB>
 
     public bool MediaIn => Usb != null;
 
-    public void InsertMedia(ref USB media)
+    public void InsertMedia(USB media)
     {
         Usb = media;
         State = MediaState.Stopped;
@@ -63,7 +63,7 @@ public class USBPlayer : IRemovableMedia<USB>
         }
     }
 
-    public string Name => "USBPLAYER MODE";
+    public string Name => MessageToDisplay;
 
     public void Play()
     {
@@ -109,6 +109,6 @@ public class USBPlayer : IRemovableMedia<USB>
 
     public void Stop() => State = MediaState.Stopped;
 
-    public object Clone() => new CDPlayer();
+    public object Clone() => new USBPlayer();
 }
 

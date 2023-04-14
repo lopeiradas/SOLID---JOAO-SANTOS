@@ -3,9 +3,16 @@ public class MultimediaDevice : IMedia
     private IMedia[] MediaDevices { get; set; }
     private IMedia? ActiveDevice { get; set; }
     private IMessageToDisplay? DevicesMenu { get; }
-    public string? MessageToDisplay { get; }
-
-    public string Name => ActiveDevice.Name;
+    public string Name => $"{ActiveDevice}";
+    public string? MessageToDisplay
+    {
+        get
+        {
+            return $"MODO: {Name}\n" +
+                   $"STATE: {ActiveDevice.MessageToDisplay}\n" +
+                   $"{DevicesMenu.MessageToDisplay}";
+        }
+    }   
 
     public MultimediaDevice(IMedia[] medios, IMessageToDisplay devicesMenu)
     {
@@ -35,15 +42,14 @@ public class MultimediaDevice : IMedia
     }
     public void Insert<T>(T media)
     {
-        if (ActiveDevice != null) { throw new Exception("Ya hay un medio insertado"); }
-
-        var nuevaMedia = SetActiveDeviceToParameterizedMedia<T>();
-        nuevaMedia.InsertMedia(ref media);
+        IRemovableMedia<T> nuevaMedia = SetActiveDeviceToParameterizedMedia<T>();
+        if (nuevaMedia.MediaIn) { throw new Exception("Ya hay un medio insertado"); }
+        nuevaMedia.InsertMedia(media);
         nuevaMedia.Play();
     }
     public void Extract<T>()
     {
-        var nuevaMedia = SetActiveDeviceToParameterizedMedia<T>();
+        IRemovableMedia<T> nuevaMedia = SetActiveDeviceToParameterizedMedia<T>();
         nuevaMedia.RemoveMedia();
     }
     public void SwitchMode()

@@ -1,11 +1,9 @@
-public class MultimediaDeviceBuilder : IMessageToDisplay
+public class MultimediaDeviceBuilder
 {
     private IMedia? CdPlayer { get; set; }
     private IMedia? DABRadio { get; set; }
     private IMedia? UsbPlayer { get; set; }
     private IMessageToDisplay MenuDeMedios { get; }
-
-    public string MessageToDisplay => "Teste";
 
     public MultimediaDeviceBuilder(IMessageToDisplay menuDeMedios)
     {
